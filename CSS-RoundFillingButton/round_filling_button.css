@@ -1,0 +1,38 @@
+.button {
+    margin-left: 50%;
+    display: inline-block; /* to make overflow working */
+
+    text-decoration: none;
+    border: 2px solid #47A647;
+    color: #47A647;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 1s;
+    position: relative;
+    overflow: hidden; /* only show the part of the pseudo-element that passes over the button */
+}
+
+/* element before the button
+but because it's in position absolute, it will be over it */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* top and left to 0 to perfectly match the button */
+    width: 100%;
+    height: 100%;
+    background-color: #47A647;
+    transition: all 1s;
+    z-index: -1; /* put it under the button */
+    transform: translate(-100%);
+}
+
+/* animate the pseudo-element on button hover (smooth thanks to transition property) */
+.button:hover::before {
+    transform: translateX(0);
+}
+
+/* change text color on hover (smooth thanks to transition property) */
+.button:hover {
+    color: #F2F4F4;
+}
