@@ -1,0 +1,24 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  padding: 0 30%;
+  font-weight: 900;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.underline {
+  background-image: linear-gradient(110deg, #09ffff, #bf44f8);
+  background-repeat: no-repeat; /* Very important to use this property */
+  background-position-y: 88%; /* not totally at the bottom to add more style */
+  background-size: 100% 0.2em; /* initial size, a very thin line */
+  transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+  background-size: 100% 95%; /* Change background-size when hover to 95% from the top*/
+}
