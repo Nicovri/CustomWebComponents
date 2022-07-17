@@ -1,3 +1,3 @@
 # CustomWebComponents
 
-Just a raw list of web components that I created to improve in Web Development &#128512;
+Just a raw list of web components that I created to improve in Web Development and Design! &#128512;
